@@ -1,20 +1,14 @@
 import pandas as pd
 import streamlit as st
-import datetime
-
 
 titanic_link = 'titanic.csv'
 titanic_data = pd.read_csv(titanic_link)
+
 # Create the title for the web app
 st.title("My First Streamlit App")
 sidebar = st.sidebar
 sidebar.title("This is the sidebar.")
 sidebar.write("You can add any elements to the sidebar.")
-
-# Give user the current date
-today = datetime.date.today()
-today_date = st.date_input('Current date', today)
-st.success('Current date: `%s`' % (today_date))
 
 # Display the content of the dataset if checkbox is true
 st.header("Dataset")
